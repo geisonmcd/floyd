@@ -22,6 +22,7 @@ public class DistanceCalculator {
 	}
 
 	public void calculate(double[][] d1) {
+		//Inicializa a matriz
 		for (int i = 0; i < VERTICES; i++) {
 			for (int j = 0; j < VERTICES; j++) {
 				dn[i][j] = d1[i][j];
@@ -38,13 +39,13 @@ public class DistanceCalculator {
 		}
 //		printMatrix(matrizRoteamento, "R1");
 
-//		for (int iteracoes = 0; iteracoes < VERTICES - 1; iteracoes++) {
+		for (int iteracao = 0; iteracao < VERTICES - 4; iteracao++) {
 			for (int linhaD1 = 0; linhaD1 < VERTICES; linhaD1++) {
 				for (int colunaDn = 0; colunaDn < VERTICES; colunaDn++) {
 					for (int colunaD1LinhaDn = 0; colunaD1LinhaDn < VERTICES; colunaD1LinhaDn++) {
-//						if (linhaD1 == 3) {
-//							System.out.println(d1[linhaD1][colunaD1LinhaDn] + " + " + dn[colunaD1LinhaDn][colunaDn]+ " é menor que " + dn[linhaD1][colunaDn]);
-//						}
+						if (iteracao == 0 && linhaD1 == 3) {
+							System.out.println(d1[linhaD1][colunaD1LinhaDn] + " + " + dn[colunaD1LinhaDn][colunaDn]+ " é menor que " + dn[linhaD1][colunaDn]);
+						}
 						if (d1[linhaD1][colunaD1LinhaDn] + preDn[colunaD1LinhaDn][colunaDn] < dn[linhaD1][colunaDn]) {
 							dn[linhaD1][colunaDn] = d1[linhaD1][colunaD1LinhaDn] + preDn[colunaD1LinhaDn][colunaDn];
 //							matrizRoteamento[linhaD1][colunaDn] = colunaD1LinhaDn;
@@ -52,8 +53,14 @@ public class DistanceCalculator {
 					}
 				}
 			}
+			printMatrix(preDn, "pre");
 			preDn = dn;
-//		}
+			for (int i = 0; i < VERTICES; i++) {
+				for (int j = 0; j < VERTICES; j++) {
+					preDn[i][j] = dn[i][j];
+				}
+			}
+		}
 		printMatrix(matrizRoteamento, "R2");
 		printMatrix(dn, "Distância");
 	}
