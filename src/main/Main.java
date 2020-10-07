@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Main {
 	
 	public static void main (String [] args) {
-		final int INF = 99999;
-		double[][] matriz = { 
+		final int INF = 1000;
+		int[][] matriz = { 
 				{ 0,	6,		INF,	10,		4 }, 
 				{ INF, 	0,		9,   	INF,	INF }, 
 				{ INF,	INF,	0,		INF,  	2 }, 

@@ -6,7 +6,7 @@ public class DistanceCalculator {
 
 	private double dn[][];
 	private double preDn[][];
-	final int INF = 99999;
+	final int INF = 1000;
 	private double matrizRoteamento[][] =  { 
 			{ INF,	INF,	INF,	INF,	INF }, 
 			{ INF,	INF,	INF,	INF,	INF }, 
@@ -40,7 +40,7 @@ public class DistanceCalculator {
 		printMatrix(d1, "D1");
 		printMatrix(matrizRoteamento, "R1");
 
-		for (int iteracao = 0; iteracao < VERTICES - 2; iteracao++) {
+		for (int iteracao = 0; iteracao < VERTICES - 2; iteracao++) { //-2
 			System.out.println("--------------- Iteração " + (iteracao + 1) + "--------------- ");
 			for (int linhaD1 = 0; linhaD1 < VERTICES; linhaD1++) {
 				for (int colunaDn = 0; colunaDn < VERTICES; colunaDn++) {
@@ -57,15 +57,15 @@ public class DistanceCalculator {
 					}
 				}
 			}
-			printMatrix(preDn, "pre");
-			printMatrix(matrizRoteamento, "RR");
+			printMatrix(preDn, "D" + (iteracao + 1));
 			//agora a dn vira pre
 			for (int i = 0; i < VERTICES; i++) {
 				for (int j = 0; j < VERTICES; j++) {
 					preDn[i][j] = dn[i][j];
 				}
 			}
-			printMatrix(dn, "Distância");
+			printMatrix(dn, "D" + (iteracao + 2));
+			printMatrix(matrizRoteamento, "R" + (iteracao + 2));
 		}
 //		printMatrix(matrizRoteamento, "R2");
 	}
