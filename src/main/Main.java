@@ -18,9 +18,10 @@ public class Main {
     		cidadeDois = scanner.nextInt();
         }
 		System.out.println();
+		//Matriz a ser escolhid para o cálculo
 		double [][] matriz = Util.matriz;
 		DistanceCalculator dc = new DistanceCalculator(matriz.length);
-		dc.calcula(matriz, cidadeUm - 1, cidadeDois - 1);
+		dc.calcula(matriz, Util.getVertice(cidadeUm), Util.getVertice(cidadeDois));
 	}
 	
 }

@@ -22,7 +22,8 @@ public class Util {
 			{ INF, 	1, 		INF, 	2, 		0 } 
 			};
 	
-	//Matriz do exemplo 2 da apostila
+	//Matriz do exemplo 2 da apostila 
+	//( double, tem que mudar todos os tipos para double para funcionar)
 	static double [][] matriz2 = { 
 			{ 0,	1,		INF,	0.5,	INF }, 
 			{ INF, 	0,		1,   	INF,	1 	}, 
@@ -72,6 +73,15 @@ public class Util {
 	 */
 	static int getCidade(int vertice) {
 		return vertice + 1;
+	}
+	
+	/**
+	 * Subtrai 1 da cidade passada como parâmetro para retornar o valor do vértice
+	 * @param cidade
+	 * @return
+	 */
+	static int getVertice(int cidade) {
+		return cidade -1;
 	}
 	
 }
