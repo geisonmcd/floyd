@@ -13,9 +13,6 @@ public class Util {
 	//Valor a ser usado como infinito
 	static final int INF = 1000;
 
-	//Número de vértices da matriz
-	public static final int VERTICES = 5;
-	
 	//Matriz do exemplo 1 da apostila
 	static double[][] matriz = { 
 			{ 0,	6,		INF,	10,		4 }, 
@@ -51,6 +48,30 @@ public class Util {
 		System.out.println("------- " + nome + " ------- ");
 		System.out.println(Arrays.deepToString(array).replace("], ", "]\n").replace("[[", "[").replace("]]", "]").replace("99999.0", "INF"));
 		System.out.println();
+	}
+	
+	/**
+	 * Método que retornar uma matriz que é cópia da matriz passada como parâmetro
+	 * @param matriz
+	 * @return
+	 */
+	static double[][] copiaMatriz(double[][] matriz) {
+		double[][] novaMatriz = new double[matriz.length][matriz.length];
+		for (int linha = 0; linha < matriz.length; linha++) {
+			for (int coluna = 0; coluna < matriz.length; coluna++) {
+				novaMatriz[linha][coluna] = matriz[linha][coluna];
+			}
+		}
+		return novaMatriz;
+	}
+	
+	/**
+	 * Soma 1 ao vértice passado como parâmetro para retornar o valor da cidade
+	 * @param vertice
+	 * @return
+	 */
+	static int getCidade(int vertice) {
+		return vertice + 1;
 	}
 	
 }
