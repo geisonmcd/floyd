@@ -94,6 +94,10 @@ public class DistanceCalculator {
 		System.out.println("Menor custo para ir da cidade " + Util.getCidade(verticeOrigem) + " até a cidade " + Util.getCidade(verticeDestino)  + ": " + matrizDistancia[verticeOrigem][verticeDestino]);
 		System.out.println();
 		System.out.println("Caminho entre a cidade " + Util.getCidade(verticeOrigem) + " e a cidade " + Util.getCidade(verticeDestino) + ":");
+		
+		/**
+		 * Algorítimo para percorrer o caminho do vertice origem ao destino
+		 */
 		int novoVerticeOrigem = verticeOrigem;
 		while (novoVerticeOrigem != verticeDestino) {
 			System.out.print(Util.getCidade(novoVerticeOrigem)+ " --> ");

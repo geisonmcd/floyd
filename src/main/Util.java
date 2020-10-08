@@ -63,7 +63,7 @@ public class Util {
 	 */
 	static void imprimeMatriz (int[][] array, String  nome) {
 		System.out.println("------- " + nome + " ------- ");
-		System.out.println(Arrays.deepToString(array).replace("], ", "]\n").replace("[[", "[").replace("]]", "]").replace("99999.0", "INF"));
+		System.out.println(Arrays.deepToString(array).replace("], ", "]\n").replace("[[", "[").replace("]]", "]").replace(Integer.toString(INF), "INF"));
 		System.out.println();
 	}
 	
