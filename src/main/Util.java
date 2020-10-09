@@ -23,7 +23,7 @@ public class Util {
 	};
 	
 	//Matriz do exemplo 2 da apostila 
-	//( double, tem que mudar todos os tipos para double para funcionar)
+	//(double, tem que mudar todos os tipos para double para funcionar)
 	static double [][] matriz2 = { 
 			{ 0,	1,		INF,	0.5,	INF }, 
 			{ INF, 	0,		1,   	INF,	1 	}, 
@@ -102,18 +102,5 @@ public class Util {
 	static int getVertice(int cidade) {
 		return cidade -1;
 	}
-	
-	static String padLeftZeros(String inputString, int length) {
-	    if (inputString.length() >= length) {
-	        return inputString;
-	    }
-	    StringBuilder sb = new StringBuilder();
-	    while (sb.length() < length - inputString.length()) {
-	        sb.append('0');
-	    }
-	    sb.append(inputString);
-	 
-	    return sb.toString();
-	}
-	
+
 }
