@@ -32,28 +32,31 @@ public class Util {
 			{ INF, INF, 	INF, 	1, 		0 	} 
 	}; 
 	
+	/**
+	 * Verificar que isso aqui está realmente certo
+	 */
 	static int [][] matrizCidades = { 
 		//1    2	3	 4    5    6    7    8    9    10   11   12   13   14   15   16   17   18   19   20	
-		{ INF, INF, INF, 861, INF, 211,	INF, INF, INF, 586,	INF, 753, 382, 896, INF, INF, INF, INF, INF, INF }, 
-		{ INF, INF,	423, 617, 365, INF,	INF, INF, INF, 357,	INF, INF, 806, INF, INF, INF, INF, INF, INF, INF }, 
-		{ INF, 423,	INF, 554, 359, INF,	INF, INF, INF, 306,	INF, INF, INF, INF, INF, INF, INF, INF, INF, INF }, 
-		{ 861, 617,	554, INF, INF, INF,	INF, INF, INF, 656,	INF, INF, INF, INF, INF, INF, INF, INF, INF, INF }, 
-		{ INF, 365,	359, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, INF, INF, INF, INF, INF },
-		{ 211, INF,	INF, INF, INF, INF,	988, INF, 293, 102,	INF, 870, 399, INF, INF, INF, INF, INF, INF, INF },
-		{ INF, INF,	INF, INF, INF, 988,	INF, 228, 043, INF,	573, 663, INF, INF, INF, INF, INF, INF, INF, INF }, 
-		{ INF, INF,	INF, INF, INF, INF,	228, INF, 801, INF,	031, INF, INF, INF, INF, INF, INF, INF, INF, INF }, 
-		{ INF, INF,	INF, INF, INF, 293,	043, 801, INF, 724,	927, 936, INF, INF, 696, INF, INF, INF, INF, INF }, 
-		{ 586, 357,	306, 656, INF, 102,	INF, INF, 724, INF,	INF, 736, 672, 804, INF, INF, INF, INF, INF, INF },
-		{ INF, INF,	INF, INF, INF, INF,	573, 031, 927, INF,	INF, 634, INF, INF, 927, INF, INF, INF, INF, INF }, 
-		{ 753, INF,	INF, INF, INF, 870,	663, INF, 936, 736,	634, INF, 844, 071, 798, INF, 713, INF, INF, INF }, 
-		{ 382, 806,	INF, INF, INF, 399,	INF, INF, INF, 672,	INF, 844, INF, 021, INF, 299, INF, INF, INF, INF }, 
-		{ 896, INF,	INF, INF, INF, INF,	INF, INF, INF, 804,	INF, 071, 021, INF, 244, 447, 726, INF, INF, INF }, 
-		{ INF, INF,	INF, INF, INF, INF,	INF, INF, 696, INF,	927, 798, INF, 244, INF, INF, 387, INF, INF, INF }, 
-		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, 299, 447, INF, INF, 503, 113, 431, INF }, 
-		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, 713, INF, 726, 387, 503, INF, 916, 490, INF }, 
-		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, 113, 916, INF, 980, 326 }, 
-		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, 431, 490, 980, INF, 455 }, 
-		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, INF, INF, 326, 455, INF }
+		{ 0, INF, INF, 861, INF, 211,	INF, INF, INF, 586,	INF, 753, 382, 896, INF, INF, INF, INF, INF, INF }, 
+		{ INF, 0,	423, 617, 365, INF,	INF, INF, INF, 357,	INF, INF, 806, INF, INF, INF, INF, INF, INF, INF }, 
+		{ INF, 423,	0, 554, 359, INF,	INF, INF, INF, 306,	INF, INF, INF, INF, INF, INF, INF, INF, INF, INF }, 
+		{ 861, 617,	554, 0, INF, INF,	INF, INF, INF, 656,	INF, INF, INF, INF, INF, INF, INF, INF, INF, INF }, 
+		{ INF, 365,	359, INF, 0, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, INF, INF, INF, INF, INF },
+		{ 211, INF,	INF, INF, INF, 0,	988, INF, 293, 102,	INF, 870, 399, INF, INF, INF, INF, INF, INF, INF },
+		{ INF, INF,	INF, INF, INF, 988,	0, 228, 043, INF,	573, 663, INF, INF, INF, INF, INF, INF, INF, INF }, 
+		{ INF, INF,	INF, INF, INF, INF,	228, 0, 801, INF,	031, INF, INF, INF, INF, INF, INF, INF, INF, INF }, 
+		{ INF, INF,	INF, INF, INF, 293,	043, 801, 0, 724,	927, 936, INF, INF, 696, INF, INF, INF, INF, INF }, 
+		{ 586, 357,	306, 656, INF, 102,	INF, INF, 724, 0,	INF, 736, 672, 804, INF, INF, INF, INF, INF, INF },
+		{ INF, INF,	INF, INF, INF, INF,	573, 031, 927, INF,	0, 634, INF, INF, 927, INF, INF, INF, INF, INF }, 
+		{ 753, INF,	INF, INF, INF, 870,	663, INF, 936, 736,	634, 0, 844, 071, 798, INF, 713, INF, INF, INF }, 
+		{ 382, 806,	INF, INF, INF, 399,	INF, INF, INF, 672,	INF, 844, 0, 021, INF, 299, INF, INF, INF, INF }, 
+		{ 896, INF,	INF, INF, INF, INF,	INF, INF, INF, 804,	INF, 071, 021, 0, 244, 447, 726, INF, INF, INF }, 
+		{ INF, INF,	INF, INF, INF, INF,	INF, INF, 696, INF,	927, 798, INF, 244, 0, INF, 387, INF, INF, INF }, 
+		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, 299, 447, INF, 0, 503, 113, 431, INF }, 
+		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, 713, INF, 726, 387, 503, 0, 916, 490, INF }, 
+		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, 113, 916, 0, 980, 326 }, 
+		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, 431, 490, 980, 0, 455 }, 
+		{ INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF,	INF, INF, INF, INF, INF, INF, INF, 326, 455, 0 }
 	}; 
 
 	/**
@@ -98,6 +101,19 @@ public class Util {
 	 */
 	static int getVertice(int cidade) {
 		return cidade -1;
+	}
+	
+	static String padLeftZeros(String inputString, int length) {
+	    if (inputString.length() >= length) {
+	        return inputString;
+	    }
+	    StringBuilder sb = new StringBuilder();
+	    while (sb.length() < length - inputString.length()) {
+	        sb.append('0');
+	    }
+	    sb.append(inputString);
+	 
+	    return sb.toString();
 	}
 	
 }
