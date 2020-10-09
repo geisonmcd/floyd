@@ -60,7 +60,6 @@ public class CalculadoraDistancia {
 		 * vai ser o número de vértices - 1, porém a D1 já vem calculada.
 		 */
 		for (int iteracao = 0; iteracao < matrizD1.length - 2; iteracao++) {
-			System.out.println("--------------- Cálculo  D" + (iteracao + 2) + " ---------------  \n");
 			
 			/**
 			 * Esses três "for" abaixo simulam o processo de iterar sobre a D1 e a MatrizDistanciaAnterior (que no cálculo da D2 é a D1, no cálculo da D3 é a D2, etc)

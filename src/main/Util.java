@@ -1,7 +1,5 @@
 package main;
 
-import java.util.Arrays;
-
 /**
  * Classe utilitária que tem as constantes usadas no programa
  * como as matrizes usadas para teste, a matriz de distâncias das cidades, 
@@ -65,8 +63,24 @@ public class Util {
 	 * @param nome do array
 	 */
 	static void imprimeMatriz (int[][] array, String  nome) {
-		System.out.println("------- " + nome + " ------- ");
-		System.out.println(Arrays.deepToString(array).replace("], ", "]\n").replace("[[", "[").replace("]]", "]").replace(Integer.toString(INF), "INF"));
+		System.out.println("--------------------------------------------------------- " + nome + " ---------------------------------------------------------");
+		for (int linha = 0; linha < array.length; linha++) {
+			for (int coluna = 0; coluna < array.length; coluna++) {
+				String valor;
+				if (nome.charAt(0) == 'D') {
+					valor = String.format("%04d", array[linha][coluna]);
+					if (valor.equals(Util.INF+"")) valor = "INFI";
+				} else {
+					valor = String.format("  %02d", array[linha][coluna]);
+					if (valor.equals("  " + Util.INF)) valor = "    ";
+				}
+				System.out.print(valor);
+				if (coluna != array.length - 1) {
+					System.out.print(", ");
+				}
+			}
+			System.out.println();
+		}
 		System.out.println();
 	}
 	
