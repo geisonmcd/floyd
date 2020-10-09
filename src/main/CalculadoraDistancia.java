@@ -5,6 +5,9 @@ package main;
  */
 public class CalculadoraDistancia {
 	
+	/**
+	 * Matriz D1 que terá as distâncias calculadas
+	 */
 	private int matrizD1[][];
 
 	/**
