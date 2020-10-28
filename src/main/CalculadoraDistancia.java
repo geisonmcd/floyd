@@ -95,7 +95,7 @@ public class CalculadoraDistancia {
 	 * @param verticeDestino
 	 */
 	private void imprimeCustoECaminhoDasCidades(int verticeOrigem, int verticeDestino) {
-		System.out.println("Menor custo para ir da cidade " + Util.getCidade(verticeOrigem) + " até a cidade " + Util.getCidade(verticeDestino)  + ": " + matrizDistancia[verticeOrigem][verticeDestino]);
+		System.out.println("Menor custo para ir da cidade " + Util.getCidade(verticeOrigem) + " até a cidade " + Util.getCidade(verticeDestino)  + ": \n" + matrizDistancia[verticeOrigem][verticeDestino]);
 		System.out.println();
 		System.out.println("Caminho entre a cidade " + Util.getCidade(verticeOrigem) + " e a cidade " + Util.getCidade(verticeDestino) + ":");
 		

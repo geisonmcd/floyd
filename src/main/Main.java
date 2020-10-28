@@ -9,14 +9,18 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main (String [] args) {
-		int cidadeUm;
-		int cidadeDois;
+		int cidadeUm = -1;
+		int cidadeDois = -1;
 		//Pede para o usuário digitar as duas cidades que terão as distância calculadas
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Digite a primeira cidade (Um número inteiro de 1 a 20)");
     		cidadeUm = scanner.nextInt();
         	System.out.println("Digite a segunda cidade (Um número inteiro de 1 a 20)");
     		cidadeDois = scanner.nextInt();
+    		if (cidadeUm < 1 || cidadeUm > 20 || cidadeDois < 1 || cidadeDois > 20) throw new Exception();
+        } catch (Exception e) {
+        	System.out.println("Erro: certifique-se que você inseriu números inteiros de 1 a 20");
+        	System.exit(1);
         }
 		System.out.println();
 		CalculadoraDistancia cd = new CalculadoraDistancia(Util.matrizCidades);
